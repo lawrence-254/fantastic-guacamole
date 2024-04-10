@@ -17,7 +17,7 @@ const Layout = () => {
     <OuterLayout>
         <Navbar/>
         <InnerLayout>
-
+        {children}
         </InnerLayout>
         <Footer/>
     </OuterLayout>
