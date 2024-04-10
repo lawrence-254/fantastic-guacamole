@@ -37,6 +37,7 @@ const NavItems = styled.a`
     background-color: #111;
     padding: 0.25rem;
     border-radius: 0.25rem;
+    font-weight: bold;
   }
 
   @media screen and (max-width: 768px) {
@@ -66,7 +67,7 @@ const Navbar = () => {
   const genreListLink=<a></a>;
   const search=<a></a>;
 
-  
+
 
   const items = [
   { key: 'Gallery Art', value: homeButton },
@@ -79,7 +80,7 @@ const desktop = (
    <NavbarContainer>
   {items.map((item, index) => (
         <NavItems key={index}>
-          {item.key}
+          {item.key.toUpperCase()}
         </NavItems>
       ))}
       </NavbarContainer>);
@@ -93,7 +94,7 @@ const mobile = (
         <>
         {items.map((item, index) => (
         <NavItems key={index}>
-          {item.key}
+          {item.key.toUpperCase()}
         </NavItems>
       ))}
         </>
