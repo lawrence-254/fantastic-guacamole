@@ -9,32 +9,39 @@ const NavbarContainer = styled.div`
     background-color: #333;
     color: white;
     top: 0;
+    width: 100%;
+    height: 3rem;
 `;
 const NavItems = styled.a`
     color: #999;
-    cursor: pointer
+    cursor: pointer;
+    &:hover{
+        color: white;
+        background-color: #111;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+    }
 `;
 
 const Navbar = () => {
   const homeButton=<a></a>;
-  const artList=<a></a>;
-  const artistListLink=<a></a>;
-
+  const artistList=<a></a>;
+  const genreListLink=<a></a>;
   const search=<a></a>;
+
+  const items = [
+  { key: 'Gallery Art', value: homeButton },
+  { key: 'Genres', value: genreListLink },
+  { key: 'Artist', value: artistList },
+  { key: 'search', value: search }
+];
   return (
     <NavbarContainer>
-      <NavItems>
-        Gallery Art
-      </NavItems>
-         <NavItems>
-        Genres
-      </NavItems>
-         <NavItems>
-        Artist
-      </NavItems>
-         <NavItems>
-        one
-      </NavItems>
+      {items.map((item, index) => (
+        <NavItems key={index}>
+          {item.key}
+        </NavItems>
+      ))}
     </NavbarContainer>
   )
 }
