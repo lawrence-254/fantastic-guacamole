@@ -16,6 +16,11 @@ const NavItems = styled.a`
 `;
 
 const Navbar = () => {
+  const homeButton=<a></a>;
+  const artList=<a></a>;
+  const artistListLink=<a></a>;
+
+  const search=<a></a>;
   return (
     <NavbarContainer>
       <NavItems>
