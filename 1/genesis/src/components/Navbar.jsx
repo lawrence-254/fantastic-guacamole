@@ -11,11 +11,26 @@ const NavbarContainer = styled.div`
     top: 0;
 `;
 const NavItems = styled.a`
+    color: #999;
+    cursor: pointer
 `;
 
 const Navbar = () => {
   return (
-    <NavbarContainer>Navbar</NavbarContainer>
+    <NavbarContainer>
+      <NavItems>
+        Gallery Art
+      </NavItems>
+         <NavItems>
+        Genres
+      </NavItems>
+         <NavItems>
+        Artist
+      </NavItems>
+         <NavItems>
+        one
+      </NavItems>
+    </NavbarContainer>
   )
 }
 
