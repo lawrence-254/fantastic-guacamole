@@ -12,6 +12,9 @@ const FooterContainer = styled.div`
     left:0;
     width:100%;
     position: fixed;
+    @media screen and (max-width: 768px) {
+        z-index: 1;
+    }
 `;
 
 const FooterItems = styled.p`
