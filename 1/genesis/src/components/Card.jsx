@@ -33,16 +33,14 @@ const CardDescription = styled.p`
   color: #666;
 `;
 
-const Card = ({}) => {
+const Card = ({key, image, title, artist}) => {
   return (
-    <CardLayout>
-        <CardImage src="https://via.placeholder.com/300" alt="placeholder" />
+    <CardLayout key={key}>
+        <CardImage src={image} alt={title} />
         <CardContent>
-            <CardTitle>Card Title</CardTitle>
+            <CardTitle>{title}</CardTitle>
             <CardDescription>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-            malesuada, felis sit amet elementum vulputate, erat turpis
-            condimentum nunc, quis lacinia mi purus non justo.
+          {artist}
             </CardDescription>
         </CardContent>
     </CardLayout>
