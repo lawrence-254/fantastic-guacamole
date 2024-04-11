@@ -10,8 +10,11 @@ height: 100%;
 
 `;
 const InnerLayout = styled.div`
-width: 100%;
-height: 80%
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 `;
 
 const Layout = ({ children }) => {
