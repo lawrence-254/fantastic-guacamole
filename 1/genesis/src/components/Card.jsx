@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const CardLayout = styled.div`
   width: 300px;
-  border: 1px solid #ccc;
+  border: 1px solid #333;
   border-radius: 8px;
   overflow: hidden;
   margin: 20px;
@@ -11,7 +11,7 @@ const CardLayout = styled.div`
   cursor: pointer;
 
   &:hover {
-    background-color: #0056b3;
+    background-color: #333;
 }
 `;
 
