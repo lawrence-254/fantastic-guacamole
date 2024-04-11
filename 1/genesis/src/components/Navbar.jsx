@@ -62,44 +62,44 @@ const Navbar = () => {
   const isMobile = checkScreenSize();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-
+  const search =<div>search</div>;
 
 
   const items = [
-  { key: 'Gallery Art', value: home },
-  { key: 'Genres', value: genres },
-  { key: 'Artist', value: artists },
+  { key: 'Gallery Art', value: 'home' },
+  { key: 'Genres', value: 'genres' },
+  { key: 'Artist', value: 'artists' },
   { key: 'search', value: search }
 ];
 
-const desktop = (
-   <NavbarContainer>
-  {items.map((item, index) => (
-        <NavItems key={index}
-        onClick={() => navigate(`/${item.value}`)}
-        >
+  const desktop = (
+    <NavbarContainer>
+      {items.map((item, index) => (
+        <NavItems key={index} onClick={() => navigate(item.value)}>
           {item.key.toUpperCase()}
         </NavItems>
       ))}
-      </NavbarContainer>);
+    </NavbarContainer>
+  );
 
-const mobile = (
-  <NavbarContainer>
-  <MobileMenuButton onClick={() => setShowMobileMenu(!showMobileMenu)}>
+  const mobile = (
+    <NavbarContainer>
+      <MobileMenuButton onClick={() => setShowMobileMenu(!showMobileMenu)}>
         {showMobileMenu ? 'X' : '☰'}
       </MobileMenuButton>
       {showMobileMenu && (
         <>
-        {items.map((item, index) => (
-        <NavItems key={index}>
-          {item.key.toUpperCase()}
-        </NavItems>
-      ))}
+          {items.map((item, index) => (
+            <NavItems key={index} onClick={() => navigate(item.value)}>
+              {item.key.toUpperCase()}
+            </NavItems>
+          ))}
         </>
       )}
-  </NavbarContainer>
+    </NavbarContainer>
+  );
 
-);
+
   return (
     <>
     {isMobile? mobile: desktop}
