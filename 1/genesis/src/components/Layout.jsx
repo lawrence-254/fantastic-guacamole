@@ -4,7 +4,8 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 const OuterLayout = styled.div`
-width: 100%;
+scroll
+width: 100vw;
 height: 100%;
 
 `;
@@ -12,16 +13,17 @@ const InnerLayout = styled.div`
 width: 100%;
 height: 80%
 `;
-const Layout = () => {
+
+const Layout = ({ children }) => {
   return (
     <OuterLayout>
-        <Navbar/>
-        <InnerLayout>
+      <Navbar />
+      <InnerLayout>
         {children}
-        </InnerLayout>
-        <Footer/>
+      </InnerLayout>
+      <Footer />
     </OuterLayout>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;
