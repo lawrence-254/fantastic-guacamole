@@ -1,6 +1,7 @@
-import React, {useEffect, useState, navigate} from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
 import  {checkScreenSize}  from '../utils/screenSizeChecker';
+import { useNavigate } from 'react-router-dom';
 
 const NavbarContainer = styled.div`
   display: flex;
@@ -61,21 +62,20 @@ const MobileMenuButton = styled.button`
 const Navbar = () => {
   const isMobile = checkScreenSize();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const navigate = useNavigate();
 
-  const search =<div>search</div>;
 
 
   const items = [
-  { key: 'Gallery Art', value: 'home' },
-  { key: 'Genres', value: 'genres' },
-  { key: 'Artist', value: 'artists' },
-  { key: 'search', value: search }
+  { key: 'Gallery Art', value: '/home' },
+  { key: 'Genres', value: '/genres' },
+  { key: 'Artist', value: '/artists' },
 ];
 
   const desktop = (
     <NavbarContainer>
       {items.map((item, index) => (
-        <NavItems key={index} onClick={() => navigate(item.value)}>
+        <NavItems key={index} onClick={() => navigate(`${item.value}`)}>
           {item.key.toUpperCase()}
         </NavItems>
       ))}

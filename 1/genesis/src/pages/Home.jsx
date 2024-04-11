@@ -1,10 +1,12 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import Card from '../components/Card';
+import data from '../data/data.json';
 
 const Home = () => {
-    const title = <h1>home page</h1>;
+    const {}
   return (
-    <Layout children={title}/>
+    <Layout children={<Card/>}/>
   )
 }
 

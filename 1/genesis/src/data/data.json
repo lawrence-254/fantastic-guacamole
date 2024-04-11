@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "title": "John Doe",
+        "image": "../assets/one.webp",
+        "artist": "John Doe"
+    },
+    {
+        "id": 2,
+        "title": "Jane Doe",
+        "image": "../assets/two.webp",
+        "artist": "Jane Doe"
+    },
+    {
+        "id": 3,
+        "title": "John Doe",
+        "image": "../assets/three.webp",
+        "artist": "John Doe"
+    },
+    {
+        "id": 4,
+        "title": "Jane Doe",
+        "image": "../assets/four.webp",
+        "artist": "Jane Doe"
+    },
+    {
+        "id": 5,
+        "title": "John Doe",
+        "image": "../assets/five.webp",
+        "artist": "John Doe"
+    },
+    {
+        "id": 6,
+        "title": "Jane Doe",
+        "image": "../assets/six.webp",
+        "artist": "Jane Doe"
+    },
+    {
+        "id": 7,
+        "title": "John Doe",
+        "image": "../assets/seven.webp",
+        "artist": "John Doe"
+    },
+    {
+        "id": 8,
+        "title": "Jane Doe",
+        "image": "../assets/eight.webp",
+        "artist": "Jane Doe"
+    },
+    {
+        "id": 9,
+        "title": "John Doe",
+        "image": "../assets/nine.webp",
+        "artist": "John Doe"
+    },
+    {
+        "id": 10,
+        "title": "Jane Doe",
+        "image": "../assets/ten.webp",
+        "artist": "Jane Doe"
+    },
+    {
+        "id": 11,
+        "title": "John Doe",
+        "image": "../assets/eleven.webp",
+        "artist": "John Doe"
+    },
+    {
+        "id": 12,
+        "title": "Jane Doe",
+        "image": "../assets/twelve.webp",
+        "artist": "Jane Doe"
+    }
+]

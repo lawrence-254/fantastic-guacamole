@@ -6,6 +6,8 @@ import {
   createBrowserRouter, RouterProvider
 } from 'react-router-dom'
 
+
+
 const router = createBrowserRouter(
   [
     {
@@ -23,7 +25,8 @@ const router = createBrowserRouter(
         {
       path: "/artists",
       element: <Artist/>,
-    },
+
+    }
   ]
 )
 
