@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, navigate} from 'react';
 import styled from 'styled-components';
 import  {checkScreenSize}  from '../utils/screenSizeChecker';
 
@@ -62,24 +62,22 @@ const Navbar = () => {
   const isMobile = checkScreenSize();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
 
-  const homeButton=<a></a>;
-  const artistList=<a></a>;
-  const genreListLink=<a></a>;
-  const search=<a></a>;
 
 
 
   const items = [
-  { key: 'Gallery Art', value: homeButton },
-  { key: 'Genres', value: genreListLink },
-  { key: 'Artist', value: artistList },
+  { key: 'Gallery Art', value: home },
+  { key: 'Genres', value: genres },
+  { key: 'Artist', value: artists },
   { key: 'search', value: search }
 ];
 
 const desktop = (
    <NavbarContainer>
   {items.map((item, index) => (
-        <NavItems key={index}>
+        <NavItems key={index}
+        onClick={() => navigate(`/${item.value}`)}
+        >
           {item.key.toUpperCase()}
         </NavItems>
       ))}
