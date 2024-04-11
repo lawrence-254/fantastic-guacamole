@@ -33,9 +33,9 @@ const CardDescription = styled.p`
   color: #666;
 `;
 
-const Card = ({key, image, title, artist}) => {
+const Card = ({cardKey, image, title, artist}) => {
   return (
-    <CardLayout key={key}>
+    <CardLayout key={cardKey}>
         <CardImage src={image} alt={title} />
         <CardContent>
             <CardTitle>{title}</CardTitle>

@@ -26,13 +26,13 @@
     {
         "id": 5,
         "title": "John Doe",
-        "image": "../assets/five.webp",
+        "image": "https://example.com/image2.jpg",
         "artist": "John Doe"
     },
     {
         "id": 6,
         "title": "Jane Doe",
-        "image": "../assets/six.webp",
+        "image": "https://example.com/image1.jpg",
         "artist": "Jane Doe"
     },
     {
