@@ -20,8 +20,8 @@ syncDatabase();
 
 // Start your Express app and define routes here
 app.use(express.json());
-app.use('/users', userRoutes);
-app.use('/todos', todoRoutes);
+app.use('/api/users', userRoutes);
+app.use('/åpi/todos', todoRoutes);
 app.get('/', (req, res) => {
     res.send('Welcome to the Todo App');
 });
