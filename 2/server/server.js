@@ -4,6 +4,8 @@ require('dotenv').config();
 const sequelize = require('./config/db');
 const User = require('./models/userModels');
 const Todo = require('./models/todosModels');
+const userRoutes = require('./routes/userRoutes');
+const todoRoutes = require('./routes/todoRoutes');
 
 async function syncDatabase() {
     try {
@@ -17,6 +19,15 @@ async function syncDatabase() {
 syncDatabase();
 
 // Start your Express app and define routes here
+app.use(express.json());
+app.use('/users', userRoutes);
+app.use('/todos', todoRoutes);
+app.get('/', (req, res) => {
+    res.send('Welcome to the Todo App');
+});
+
+
+
 
 const PORT = process.env.PORT || 3000;
 
