@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/db');
+const User = require('../models/userModels');
 const saltRounds = 10;
 
 const getAllUsers = async (req, res) => {

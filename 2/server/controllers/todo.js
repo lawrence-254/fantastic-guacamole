@@ -1,4 +1,5 @@
 const sequelize = require('../config/db');
+const Todo = require('../models/todosModels');
 
 const getAllTodos = async (req, res) => {
     const todos = await sequelize.models.Todo.findAll();
