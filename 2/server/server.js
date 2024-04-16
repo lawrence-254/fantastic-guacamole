@@ -6,7 +6,6 @@ const User = require('./models/userModels');
 const Todo = require('./models/todosModels');
 const userRoutes = require('./routes/userRoutes');
 const todoRoutes = require('./routes/todoRoutes');
-const authMiddleware = require('./middleware/authMiddleware');
 
 async function syncDatabase() {
     try {
@@ -22,7 +21,7 @@ syncDatabase();
 // Start your Express app and define routes here
 app.use(express.json());
 app.use('/api/users', userRoutes);
-app.use('/åpi/todos', authMiddleware, todoRoutes);
+app.use('/åpi/todos', todoRoutes);
 app.get('/', (req, res) => {
     res.send('Welcome to the Todo App');
 });
