@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const Todo = () => {
     const [todos, setTodos] = useState([])
@@ -22,7 +22,7 @@ const Todo = () => {
         removeTodo()
     }
 
-    const inputForm = (
+    const InputForm = (
         <div>
             <input
                 type="text"
@@ -34,7 +34,7 @@ const Todo = () => {
         </div>
     )
 
-    const todoList = (
+    const TodoList = (
         <ul>
             {todos.map((t, i) => (
                 <li key={i}>
@@ -45,7 +45,25 @@ const Todo = () => {
         </ul>
     )
   return (
-    <div>Todo</div>
+    <div>
+        <div>
+            <input
+                type="text"
+                value={todo}
+                onChange={e => setTodo(e.target.value)}
+                onKeyPress={handleKeyPress}
+            />
+            <button onClick={addTodo}>Add</button>
+        </div>
+ <ul>
+            {todos.map((t, i) => (
+                <li key={i}>
+                    {t}
+                    <button onClick={() => handleRemove(i)}>Remove</button>
+                </li>
+            ))}
+        </ul>
+    </div>
   )
 }
 
