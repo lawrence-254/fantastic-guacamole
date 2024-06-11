@@ -1,14 +1,15 @@
-
 import './App.css'
-import Todo from './components/Todo'
-import IssueList from './components/issue/IssueList'
+import Card from './App/Customer/Components/Product/Card'
+import LandingPage from './App/Home/LandingPage'
+
+
 
 function App() {
 
   return (
     <>
-    {/* <Todo/> */}
-    <IssueList/>
+    <Card/>
+    {/* <LandingPage/> */}
     </>
   )
 }
