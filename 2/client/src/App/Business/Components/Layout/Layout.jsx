@@ -3,16 +3,20 @@ import Footer from './Footer.jsx'
 import Navbar from './Navbar.jsx'
 import Sidebar from './Sidebar.jsx'
 
+import './layout.css'
+
 const Layout = (props) => {
   const {children} = props
   return (
-    <div>
-      <Navbar/>
-      <Sidebar/>
-      <div>
-        {children}
+    <div className='container'>
+      <div className='sidebar'>
+        <Sidebar/>
       </div>
+      <div className='dynamicContainer'>
+      <Navbar/>
+        {children}
       <Footer/>
+      </div>
     </div>
   )
 }
