@@ -22,7 +22,7 @@ const StallLogin = () => {
             {loading ? 'LOADING...' : 'LOGIN'}
         </button>
     </form>
-    <p>Dont have an account? <Link to="/register">REGISTER</Link></p>
+    {/* <p>Dont have an account? <Link to="/register">REGISTER</Link></p> */}
     </div>
   )
 }
