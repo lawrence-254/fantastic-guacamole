@@ -8,14 +8,10 @@ const StallProfile = () => {
   return (
     <Layout>
       <h1>STALL PROFILE</h1>
-      <p>Sow the details to your stall</p>
+      <p>Show the details to your stall</p>
       <div>
         <h2>Add your stall details</h2>
         <form action="" method="post">
-          <div className="form-group">
-            <label htmlFor="profileImage">Stall Profile Image</label>
-            <input type="file" name="" id="" />
-          </div>
           <div className="form-group">
             <label htmlFor="shopTitle">Stall Title</label>
             <input type="text" name="" id="" />
@@ -35,6 +31,10 @@ const StallProfile = () => {
           <div className="form-group">
             <label htmlFor="location">Enter your business location address</label>
             <input type="text" name="" id="" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="profileImage">Stall Profile Image</label>
+            <input type="file" name="" id="" />
           </div>
           <button type="submit" className="btn btn-primary" disabled={loading}>
             {loading ? 'UPDATING...' : 'UPDATE'}
