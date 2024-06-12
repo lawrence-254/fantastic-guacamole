@@ -1,8 +1,12 @@
 import React from 'react'
+import Layout from '../Components/Layout/Layout'
 
 const NewInventory = () => {
   return (
-    <div>NewInventory</div>
+    <Layout>
+      new
+    </Layout>
+
   )
 }
 

@@ -1,14 +1,12 @@
 import './App.css'
-import Sidebar from './App/Business/Components/Layout/Sidebar'
-
-
+import StallProfile from './App/Business/pages/StallProfile'
 
 
 function App() {
 
   return (
     <>
-    <Sidebar/>
+    <StallProfile/>
     </>
   )
 }

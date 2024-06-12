@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../Components/Layout/Layout'
 
 const index = () => {
   return (
-    <div>index</div>
+    <Layout>
+      dash
+    </Layout>
   )
 }
 

@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../Components/Layout/Layout'
 
 const UpdateInventory = () => {
   return (
-    <div>UpdateInventory</div>
+    <Layout>
+        update
+    </Layout>
   )
 }
 

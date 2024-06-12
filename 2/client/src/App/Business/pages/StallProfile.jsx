@@ -1,10 +1,12 @@
 import React, {useState}  from 'react'
+import Layout from '../Components/Layout/Layout'
+
 
 const StallProfile = () => {
   const [loading, setLoading]=useState(false);
 
   return (
-    <div>
+    <Layout>
       <h1>STALL PROFILE</h1>
       <p>Sow the details to your stall</p>
       <div>
@@ -39,7 +41,7 @@ const StallProfile = () => {
         </button>
         </form>
       </div>
-    </div>
+    </Layout>
   )
 }
 

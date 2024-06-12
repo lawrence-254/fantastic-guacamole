@@ -1,8 +1,11 @@
 import React from 'react'
+import Layout from '../Components/Layout/Layout'
 
 const RemoveInventory = () => {
   return (
-    <div>RemoveInventory</div>
+    <Layout>
+        remove
+    </Layout>
   )
 }
 
