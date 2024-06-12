@@ -5,7 +5,7 @@ const StallProfile = () => {
 
   return (
     <div>
-      <h1>PROFILE</h1>
+      <h1>STALL PROFILE</h1>
       <p>Sow the details to your stall</p>
       <div>
         <h2>Add your stall details</h2>
@@ -35,7 +35,7 @@ const StallProfile = () => {
             <input type="text" name="" id="" />
           </div>
           <button type="submit" className="btn btn-primary" disabled={loading}>
-            {loading ? 'LOADING...' : 'LOGIN'}
+            {loading ? 'UPDATING...' : 'UPDATE'}
         </button>
         </form>
       </div>
