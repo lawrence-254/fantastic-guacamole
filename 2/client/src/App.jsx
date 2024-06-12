@@ -1,5 +1,5 @@
 import './App.css'
-import StallProfile from './App/Business/pages/StallProfile'
+import Sidebar from './App/Business/Components/Layout/Sidebar'
 
 
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-   <StallProfile/>
+    <Sidebar/>
     </>
   )
 }
