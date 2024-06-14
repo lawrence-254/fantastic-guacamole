@@ -26,27 +26,27 @@ const StallProfile = () => {
         <form  name="addProfile" method="post">
           <div className="form-group">
             <label htmlFor="shopTitle">Stall Title</label>
-            <input type="text" name="stallTitle" id="" />
+            <input type="text" name="stallTitle" id="shopTitle" autoComplete='false' />
           </div>
           <div className="form-group">
             <label htmlFor="description">Describe what your stall deals in (electronics, shoes, etc...)</label>
-            <input type="text" name="description" id="" />
+            <input type="text" name="description" id="description" autoComplete='false'/>
           </div>
           <div className="form-group">
             <label htmlFor="phoneNumber">Enter phone number</label>
-            <input type="tel" name="phoneNumber" id="" />
+            <input type="tel" name="phoneNumber" id="phoneNumber" autoComplete='false'/>
           </div>
           <div className="form-group">
             <label htmlFor="email">Enter email</label>
-            <input type="email" name="email" id="" />
+            <input type="email" name="email" id="email" autoComplete='false'  />
           </div>
           <div className="form-group">
             <label htmlFor="location">Enter your business location address</label>
-            <input type="text" name="location" id="" />
+            <input type="text" name="location" id="location" autoComplete='false' />
           </div>
           <div className="form-group">
             <label htmlFor="profileImage">Stall Profile Image</label>
-            <input type="file" name="profileImage" id="" />
+            <input type="file" name="profileImage" id="profileImage" autoComplete='false'/>
           </div>
           <button type="submit" className="btn btn-primary" disabled={loading} onClick={handleSubmit}>
             {loading ? 'UPDATING...' : 'UPDATE'}
