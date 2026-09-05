@@ -1,0 +1,501 @@
+/* Navigation Bar styling */
+
+.layoutPage {
+  width: 100vw;
+  position: relative;
+  background: #ffffff;
+}
+.mainAppContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.navbarContainer {
+  margin-top: 12px;
+  width: 100vw;
+  height: 54px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: none;
+}
+
+.navbarLeft,
+.navbarRight {
+  width: 48vw;
+  height: 100%;
+  gap: 68px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.menuIcon {
+  display: none;
+  border-radius: 12px;
+  width: 48px;
+}
+.title {
+  text-decoration: none;
+  height: 51px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+.title > img {
+  width: 100%;
+  font-family: Roboto;
+  font-weight: 700;
+  line-height: 100%;
+  vertical-align: middle;
+  color: #fc4308;
+}
+
+.menuItems {
+  width: 476px;
+  height: 51px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.menuItems > li,
+.liveLink {
+  text-decoration: none;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  color: #3e3232;
+  white-space: nowrap;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.menuItems > li > span > img {
+  margin-bottom: -3px;
+  margin-top: 3px;
+  margin-left: 1px;
+}
+.smallScreenProfileArea,
+.searchBoxMenuIcon {
+  display: none;
+}
+.searchBox {
+  height: 48px;
+  gap: 18px;
+  width: 57%;
+  background: #f5f5f5;
+  gap: 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.threeVerticalDots {
+  margin-left: 6px;
+  cursor: pointer;
+}
+.inputArea {
+  width: 100%;
+  border: none;
+  background: #f5f5f5;
+}
+.searchIcon {
+  margin-right: 6px;
+  cursor: pointer;
+}
+.profileSectionContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.profileSection {
+  height: 48px;
+  gap: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+.userSection {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.aviPic {
+  border-radius: 12px;
+  width: 48px;
+  cursor: pointer;
+}
+
+.aviName {
+  display: flex;
+  flex-direction: row;
+  margin-left: 3px;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.iconSection {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+/* footer */
+.footerContainer {
+  width: auto;
+  height: 483px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.leftFooter,
+.rightFooter {
+  width: 50%;
+  height: 483px;
+}
+
+.leftFooter {
+  height: 483px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.topLeftFooter {
+  display: flex;
+  margin-top: 15px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.leftLeftFooterContainer {
+  display: flex;
+  flex-direction: column;
+}
+.rightLeftFooterContainer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 21px;
+}
+.megaNews {
+  width: 340px;
+  height: 202px;
+  top: 40px;
+  left: 204px;
+}
+
+.footerTitle {
+  height: 23px;
+  gap: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Roboto";
+  font-weight: 500px;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+}
+
+.footerExplanation {
+  width: 340px;
+  height: 159px;
+  top: 83px;
+  left: 214px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-align: justify;
+  text-transform: capitalize;
+  color: #3e3232bf;
+}
+
+.categories {
+  width: 108px;
+  height: 202px;
+  top: 40px;
+  left: 716px;
+}
+.categoryArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.categoryLink {
+  margin-left: 0px;
+  justify-self: flex-start;
+}
+
+.categoryList {
+  margin: 2px 0;
+}
+.newsletters {
+  width: 340px;
+  height: 91px;
+  top: 273px;
+  left: 204px;
+}
+.inputSection {
+  gap: 16px;
+  padding-top: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  border-radius: 12px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  cursor: text;
+}
+.inputSection > input {
+  border: none;
+  width: 80%;
+}
+.inputSection > input::placeholder {
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+}
+
+.inputSection > input:focus {
+  border: none;
+}
+
+.socialNetwork {
+  width: 183px;
+  height: 83px;
+  top: 273px;
+  left: 716px;
+}
+.socialNetworksContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.instagramButton {
+  width: 128px;
+  height: 40px;
+  gap: 8px;
+  padding-top: 10px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  border-radius: 12px;
+  background: linear-gradient(262.85deg, #f45c9f 5.57%, #ff7563 73.65%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+.twitterIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(227.96deg, #2ca5e0 11.38%, #67c9f5 84.07%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.copyright {
+  width: 90%;
+  height: 48px;
+  gap: 16px;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  margin-top: 21px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  background: #3e32320d;
+}
+.copyrightLeft {
+  width: 50%;
+  height: 14px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  color: #3e3232bf;
+}
+
+.copyrightRight {
+  color: #3e3232bf;
+  height: 14px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.rightFooter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.newComments,
+.instagramAccount {
+  width: 303px;
+  height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.commentContainer,
+.instagramPhoto {
+  width: 300px;
+  height: 300px;
+  top: 43px;
+  border-radius: 12px;
+  /* margin-bottom: 0; */
+}
+.commentBox {
+  height: 45px;
+  top: 285px;
+  gap: 8px;
+  border-radius: 12px;
+  padding: 16px;
+  background: #f5f5f5;
+}
+.commentBox > h5 {
+  margin: 0;
+  padding: 0;
+}
+.commentBox > p {
+  margin: 0;
+  padding: 0;
+}
+.instagramPhoto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.imagesInGallery {
+  min-width: 99px;
+  border-radius: 12px;
+  flex: 1 1 calc(33.33% - 20px);
+  box-sizing: border-box;
+  padding: 10px;
+}
+/* end of footer */
+@media screen and (max-width: 1000px) {
+  .navbarContainer {
+    width: 100vw;
+    height: auto;
+    flex-direction: column;
+  }
+  .menuArea {
+    display: flex;
+    flex-direction: row;
+  }
+  .menuIcon {
+    display: block;
+    cursor: pointer;
+  }
+  .menuItems {
+    display: none;
+  }
+  .smallScreenProfileArea {
+    display: block;
+  }
+  .profileSectionContainer {
+    display: none;
+  }
+  .profileSection {
+    width: auto;
+  }
+  .navbarLeft {
+    flex-direction: row;
+    width: 100vw;
+    margin-bottom: 9px;
+  }
+  .navbarRight {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .searchBox {
+    width: 100vw;
+  }
+
+  /* footer */
+  .leftFooter {
+    width: 100%;
+  }
+  .rightFooter {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .searchBoxMenuIcon {
+    display: block;
+  }
+  .navbarContainer {
+    height: auto;
+  }
+  .navbarLeft {
+    display: none;
+  }
+  .navbarRight {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  /* footer */
+  .footerContainer {
+    display: none;
+  }
+}

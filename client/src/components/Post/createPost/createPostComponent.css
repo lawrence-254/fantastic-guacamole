@@ -1,0 +1,657 @@
+.createPostComponentContainer {
+  border: solid green 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 51px;
+}
+.createPostComponentNavigation {
+  border: 2px orange dashed;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.form {
+  width: 100vw;
+  border: blue 1px solid;
+}
+.formContainer {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.leftSection {
+  height: 100%;
+  width: 69%;
+  /* border: solid black 1px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.topLeftSection {
+  display: flex;
+  flex-direction: row;
+}
+
+.formItem {
+  width: 50%;
+  margin: 0 3px;
+  height: 82px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+}
+.formItem > label {
+  width: 32px;
+  text-align: left;
+  height: 19px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  text-transform: capitalize;
+  color: #3e3232;
+}
+
+.formItem > span {
+  width: 100%;
+  height: 48px;
+  top: 615px;
+  left: 204px;
+  border-radius: 12px;
+  background: #f5f5f5;
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: row;
+}
+.formItem > span > input {
+  background: none;
+  border: none;
+  width: 100%;
+}
+
+.formItem > span > input:focus {
+  outline: 0;
+  border-color: #fc4308;
+  box-shadow: 0 0 0 3px #f38c6a;
+  border-radius: 12px;
+}
+.formItem > span > img {
+  cursor: pointer;
+}
+.explanationArea {
+  border: 1px red solid;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.explanationMenu > button {
+  margin-right: 12px;
+  width: 99px;
+  height: 40px;
+  border-radius: 12px;
+  padding-top: 10px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+}
+.rightSection {
+  height: 100%;
+  width: 27%;
+  border: solid green 1px;
+}
+
+.addMediaMainContainer {
+  width: 360px;
+  height: 360px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  background: #f5f5f5;
+}
+
+.addMediaInnerContainer {
+  width: 340px;
+  height: 340px;
+  border-radius: 12px;
+  border-width: 1px;
+  background: #f5f5f5;
+  border: 1px solid #e1e1e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.actionButtonArea {
+  width: 100%;
+  /* width: 360px; */
+  height: 40px;
+  top: 1000px;
+  left: 1356px;
+  border: #f38c6a solid 1px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.actionButtonArea > button {
+  width: 104px;
+  height: 40px;
+  left: 256px;
+  gap: 8px;
+  border-radius: 12px;
+  padding-top: 10px;
+  padding-right: 24px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+  text-transform: capitalize;
+  background: #f5f5f5;
+  white-space: nowrap;
+}
+.actionButtonArea > button > img {
+  fill: #3e323280;
+}
+.actionButtonArea > button:active {
+  background: #f81539bf;
+  color: #ffffff;
+}
+
+.actionButtonArea > button > img:active {
+  color: #ffffff;
+}
+.videoFormFooterSection {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 12px;
+  flex-direction: column;
+}
+.videoFormFooterSection > label {
+  font-family: " Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  color: #3e3232;
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+.imageGalleryContainer {
+  width: 70%;
+  height: 359px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 32px 0px #00000012;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  justify-self: start;
+  align-self: flex-start;
+}
+
+.leftGalleryArea {
+  width: 319px;
+  height: 319px;
+  border-radius: 12px;
+  background: #f5f5f5;
+}
+
+.innerLeftGalleryArea {
+  width: 299px;
+  height: 299px;
+  top: 10px;
+  left: 10px;
+  border-radius: 12px;
+  border-width: 1px;
+  border: 1px solid #e1e1e1;
+  background: #f5f5f5;
+  border: 1px solid #e1e1e1;
+}
+
+.rightGalleryArea {
+  /* display: ; */
+  border: orangered 1px solid;
+  height: 299px;
+  width: 60%;
+}
+
+/* createPostComponent.css */
+.imageGalleryContainer {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.leftGalleryArea {
+  flex: 0 0 auto;
+  /* Adjust width as needed, e.g., for the upload area */
+  width: 200px;
+}
+
+.innerLeftGalleryArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #f0f0f0;
+  padding: 10px;
+}
+
+.rightGalleryArea {
+  flex: 1;
+  width: 100%;
+}
+
+/* Ensure the gallery scales properly */
+@media (max-width: 768px) {
+  .imageGalleryContainer {
+    flex-direction: column; /* Stack upload and gallery vertically on small screens */
+  }
+
+  .leftGalleryArea {
+    width: 100%;
+  }
+}
+
+/* createPostComponent.css */
+.createPostComponentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.createPostComponentNavigation {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.createPostComponentNavigation button {
+  padding: 10px 20px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.createPostComponentNavigation button.active {
+  background: #007bff;
+  color: white;
+}
+
+.formContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.leftSection,
+.rightSection {
+  flex: 1;
+}
+
+.topLeftSection,
+.explanationArea {
+  margin-bottom: 20px;
+}
+
+.formItem {
+  margin-bottom: 15px;
+}
+
+.formItem label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formItem span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.formItem input {
+  padding: 8px;
+  width: 100%;
+}
+
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.tag {
+  background: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.explanationMenu {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.explanationMenu button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.explanationArea textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+}
+
+.addMediaMainContainer {
+  margin-bottom: 20px;
+}
+
+.addMediaInnerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background: #f0f0f0;
+  border: 2px dashed #ccc;
+}
+
+.addMediaInnerContainer button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.actionButtonArea {
+  display: flex;
+  gap: 10px;
+}
+
+.actionButtonArea button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.videoFormFooterSection {
+  margin-top: 20px;
+}
+
+.imageGalleryContainer {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.leftGalleryArea {
+  flex: 0 0 auto;
+  width: 200px;
+}
+
+.innerLeftGalleryArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #f0f0f0;
+  border: 2px dashed #ccc;
+  padding: 10px;
+}
+
+.innerLeftGalleryArea button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.rightGalleryArea {
+  flex: 1;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    flex-direction: column;
+  }
+
+  .imageGalleryContainer {
+    flex-direction: column;
+  }
+
+  .leftGalleryArea {
+    width: 100%;
+  }
+}
+
+/* createPostComponent.css */
+.createPostComponentContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.createPostComponentNavigation {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.createPostComponentNavigation button {
+  padding: 10px 20px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.createPostComponentNavigation button.active {
+  background: #007bff;
+  color: white;
+}
+
+.formContainer {
+  display: flex;
+  gap: 20px;
+}
+
+.leftSection,
+.rightSection {
+  flex: 1;
+}
+
+.topLeftSection,
+.explanationArea {
+  margin-bottom: 20px;
+}
+
+.formItem {
+  margin-bottom: 15px;
+}
+
+.formItem label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.formItem span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.formItem input {
+  padding: 8px;
+  width: 100%;
+}
+
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.tag {
+  background: #e0e0e0;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.explanationMenu {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.explanationMenu button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.explanationArea textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 10px;
+}
+
+.addMediaMainContainer {
+  margin-bottom: 20px;
+}
+
+.addMediaInnerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  background: #f0f0f0;
+  border: 2px dashed #ccc;
+}
+
+.addMediaInnerContainer button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.actionButtonArea {
+  display: flex;
+  gap: 10px;
+}
+
+.actionButtonArea button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px 20px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+}
+
+.videoFormFooterSection {
+  margin-top: 20px;
+}
+
+.imageGalleryContainer {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.leftGalleryArea {
+  flex: 0 0 auto;
+  width: 200px;
+}
+
+.innerLeftGalleryArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: #f0f0f0;
+  border: 2px dashed #ccc;
+  padding: 10px;
+}
+
+.innerLeftGalleryArea button {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.rightGalleryArea {
+  flex: 1;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    flex-direction: column;
+  }
+
+  .imageGalleryContainer {
+    flex-direction: column;
+  }
+
+  .leftGalleryArea {
+    width: 100%;
+  }
+}

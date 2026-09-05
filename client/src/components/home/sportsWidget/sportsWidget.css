@@ -1,0 +1,386 @@
+.sportsWidgetContainer {
+  width: 100vw;
+  height: 464px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+}
+.sportsWidgetContainer::before {
+  content: "";
+  position: absolute;
+
+  width: 100%;
+  height: 464px;
+  background-image: url("../../../assets/Home/sportsWidget/background.svg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(24px);
+  z-index: -1;
+}
+
+.calenderContainer {
+  width: calc(100% / 4.4);
+  height: 52%;
+  border-radius: 12px;
+  background: #ffffff;
+  margin-left: 12px;
+  padding: 0 3px;
+}
+
+.calenderHeader {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3e3232;
+  padding: 9px;
+}
+.calenderBodyTitle {
+  width: 100%;
+  padding: 0%;
+  height: 19px;
+  color: #3e323280;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.calenderBodyDay {
+  width: 18px;
+  height: 18px;
+  margin-left: 3px;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3e323280;
+}
+
+/* xperimental */
+.calendarBodyDateRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendarBodyDate {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+}
+
+.bordering-date {
+  color: #999; /* Lighter color for bordering dates */
+  opacity: 0.5; /* Optional: make them semi-transparent */
+}
+
+.calendarBodyDate img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* end of xperimental */
+.calenderBodyDateRow {
+  width: 100%;
+  height: 21px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+
+.tableContainer {
+  width: calc(100% / 2.5);
+  height: 52%;
+  border-radius: 12px;
+  margin-left: 12px;
+  background: #ffffff;
+  padding: 0 3px;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.tableHeaderTitle {
+  font-weight: bold;
+  width: 38%;
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.tableHeaderButton {
+  padding: 8px 12px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  width: 62%;
+  color: #3e323280;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tableHeaderButton > span {
+  font-family: "Roboto";
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3e323280;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.clubRowContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 9px;
+}
+
+.clubLeftRow {
+  width: 38%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.clubRowLogo {
+  width: 18px;
+  height: 18px;
+}
+.clubLogo {
+  width: 18px;
+  height: 18px;
+}
+.clubRowRank {
+  width: 6px;
+  font-family: "Roboto";
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 15.23px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-right: 6px;
+}
+.clubRowTeam {
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18.23px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+.clubInfo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.clubInfo > span {
+  margin-left: 15px;
+}
+.tableBodyRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.tableBodyRowRank,
+.tableBodyRowTeam,
+.tableBodyRowPoints {
+  width: 33%;
+  text-align: center;
+}
+
+.fixtureContainer {
+  width: calc(100% / 4.4);
+  height: 52%;
+  border-radius: 12px;
+  background: #ffffff;
+  margin-left: 12px;
+  padding: 0 3px;
+}
+
+.fixtureHeaderTitle {
+  display: flex;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  justify-content: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3e3232;
+  white-space: nowrap;
+}
+
+.fixtureBody {
+  display: flex;
+  flex-direction: column;
+  margin-top: 18px;
+}
+
+.fixtureRowAway {
+  width: auto;
+  height: auto;
+}
+.fixtureRowVs {
+  width: auto;
+  height: auto;
+  font-family: "Roboto";
+  font-size: 39px;
+  font-weight: 600;
+  line-height: 45.7px;
+  letter-spacing: 5px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: linear-gradient(270deg, #f81539 0%, #fc4308 94%);
+  margin-bottom: 15px;
+}
+
+.fixtureBody > p {
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.fixtureFooter {
+  width: auto;
+  height: auto;
+  margin-left: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px;
+}
+
+.homeTeam {
+  width: 39%;
+  height: auto;
+  border-radius: 12px 0px 0px 12px;
+  background: #2f5c9f;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.awayTeam {
+  width: 39%;
+  height: auto;
+  border-radius: 0px 12px 12px 0px;
+  background: #aa3034;
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: row;
+  width: 22%;
+  height: auto;
+}
+
+.score {
+  width: 100%;
+  height: 100%;
+  background-color: #3e3232;
+  color: white;
+  border-radius: 3px;
+  margin: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto";
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 29.3px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .calenderContainer {
+    display: none;
+  }
+  .tableContainer {
+    display: none;
+  }
+  .fixtureContainer {
+    width: 400px;
+    height: 52%;
+    border: 2px solid #e6e6e6;
+    border-radius: 12px;
+    background: #ffffff;
+    margin-left: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calenderContainer {
+    width: 400px;
+    height: 52%;
+    border: 2px solid #e6e6e6;
+    border-radius: 12px;
+    background: #ffffff;
+    margin-left: 12px;
+  }
+  .tableContainer {
+    display: none;
+  }
+  .fixtureContainer {
+    display: none;
+  }
+}

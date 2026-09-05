@@ -1,0 +1,92 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+.redHorizontalRectangle {
+  width: 10px;
+  height: 4px;
+  border-radius: 12px;
+  background: #f81539;
+}
+.redVerticalRectangle {
+  width: 4px;
+  height: 10px;
+  border-radius: 12px;
+  background: #f81539;
+}
+
+.nonStyledLinked {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nonStyledList {
+  text-decoration: none;
+  list-style: none;
+  text-transform: capitalize;
+  white-space: nowrap;
+  text-align: left;
+  color: #3e3232;
+  gap: 10px;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  line-height: 21px;
+  text-transform: capitalize;
+}
+
+.postAreaContainer {
+  margin: 21px 0;
+  display: flex;
+  flex-direction: column;
+}
+.postAreaTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+.postTitleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+}
+
+.postNavigationArea {
+  width: 100px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.postNavigationButton {
+  width: 40px;
+  height: 40px;
+  gap: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+  background: #f5f5f5;
+}
+
+.postCarousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,34 @@
+.newPostContainer {
+  width: 100%;
+  height: 678px;
+}
+.newPostAreaTitle {
+  width: 100%;
+  height: 40px;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+/* .showButton {
+  width: 114px;
+  height: 39px;
+  padding: 10px 16px 10px 24px;
+  border-radius: 12px;
+  background: #f5f5f5;
+  color: #3e3232;
+  border: none;
+} */
+
+.newPostCarousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.newPostCarousel > * {
+  flex: 1 1 48%;
+  box-sizing: border-box;
+}

@@ -1,0 +1,69 @@
+.TitleBreadCrumbContainer {
+  width: 100vw;
+  height: 24px;
+  display: flex;
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.TitleBreadCrumbHeader {
+  width: 456px;
+  height: 14px;
+  font-size: 18px;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.TitleBreadCrumbTitle {
+  width: 33px;
+  height: 14px;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3e3232;
+  margin-right: 2px;
+}
+
+.TitleBreadCrumbIcon {
+  width: 16px;
+  height: 12px;
+  margin: 0 1px;
+}
+
+.TitleBreadCrumbPageInfo {
+  width: 48px;
+  height: 14px;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3e3232;
+  margin-left: 2px;
+  white-space: nowrap;
+}
+
+.TitleBreadCrumbPostTitle {
+  width: 343px;
+  height: 14px;
+  font-family: "Roboto";
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14.06px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-left: 2px;
+  white-space: nowrap;
+}

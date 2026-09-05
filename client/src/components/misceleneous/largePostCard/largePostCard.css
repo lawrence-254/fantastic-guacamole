@@ -1,0 +1,199 @@
+.largePostCardContainer {
+  width: 744px;
+  height: 210px;
+  top: 468px;
+  left: 768px;
+  gap: 10px;
+  border-radius: 12px;
+  padding: 10px;
+  background: #ffffff;
+  box-shadow: 0px 0px 32px 0px #00000012;
+  display: flex;
+  flex-direction: row;
+
+  width: fit-content;
+  /* height: fit-content; */
+  padding: 10px 0px 0px 0px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0px 0px 32px 0px #00000012;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.largePostCardImage {
+  width: 340px;
+  height: 190px;
+  border-radius: 12px;
+
+  width: 45%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.largePostCardImage > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.largePostCardContent {
+  width: 374px;
+  height: 190px;
+
+  width: 51%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.largePostCardContentTitle {
+  width: 362px;
+  height: fit-content;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  text-transform: capitalize;
+  color: #3e3232;
+
+  height: 66%;
+  width: 99%;
+  margin-top: 0;
+  margin-bottom: 3px;
+
+  font-family: "Roboto";
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18.75px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3e3232;
+}
+.largePostCardContentPostContent {
+  width: 362px;
+  height: fit-content;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-transform: capitalize;
+  color: #3e3232bf;
+
+  height: 66%;
+  width: 99%;
+  margin-top: 0;
+  margin-bottom: 3px;
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #3e3232bf;
+}
+
+.largePostCardFooter {
+  width: 374px;
+  height: 72px;
+  border-radius: 12px;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+
+  width: 99%;
+  height: 39%;
+  border-radius: 12px;
+  background: #f5f5f5;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 3px;
+}
+
+.largePostCardFooterLeft {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.largePostCardFooterMiddle {
+  width: 174px;
+  height: 44px;
+  height: auto;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  width: 75%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 6px;
+}
+
+.largePostCardFooterMiddleHeader {
+  width: 174px;
+  height: 22px;
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.1px;
+  color: #3e3232;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+
+  width: 44px;
+  height: 22px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  white-space: nowrap;
+  margin: 0;
+}
+
+.largePostCardFooterMiddleSubHeader {
+  width: 150px;
+  height: 18px;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.25px;
+  color: #3e3232bf;
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+
+  width: fit-content;
+  height: 22px;
+  font-size: small;
+  display: flex;
+  align-items: flex-start;
+  margin: 0;
+}
