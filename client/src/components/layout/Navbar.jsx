@@ -60,13 +60,12 @@ function Navbar() {
     <div className="navbarContainer">
       <div className="navbarLeft">
         <div className="menuArea">
-          <img src={menuIcon} className="menuIcon" alt="Menu toggle" />
           <Link to="/" className="title">
-            <img src={logo} alt="MEGA.news logo" />
+            TechWitter
           </Link>
         </div>
         <ListMenu activeMenu={activeMenu} handleMenuClick={handleMenuClick} />
-        <div className="smallScreenProfileArea">
+        {/* <div className="smallScreenProfileArea">
           {userIsLoggedIn ? (
             <ProfileArea />
           ) : (
@@ -85,7 +84,7 @@ function Navbar() {
               LOGIN
             </Link>
           )}{" "}
-        </div>
+        </div> */}
       </div>
       <div className="navbarRight">
         <img
@@ -116,8 +115,8 @@ function Navbar() {
               style={{
                 textDecoration: "none",
                 background: "none",
-                border: "solid #fc4308 1px",
-                color: "#fc4308",
+                border: "solid teal 1px",
+                color: "teal",
                 padding: "6px",
                 margin: "3px",
                 borderRadius: "6px",

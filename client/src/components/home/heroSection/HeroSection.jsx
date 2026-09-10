@@ -6,6 +6,7 @@ import "./heroSection.css";
 
 function HeroSection({ singleContentList, videoItems }) {
   const [startIndex, setStartIndex] = useState(0);
+  const featuredVideo='runnunu'
 
   const showNextItems = () => {
     setStartIndex((prevIndex) => {
@@ -23,7 +24,8 @@ function HeroSection({ singleContentList, videoItems }) {
     });
   };
 
-  const visibleItems = videoItems.slice(startIndex, startIndex + 2);
+  // const visibleItems = videoItems.slice(startIndex, startIndex + 2);
+  const visibleItems='james'
   console.log("Visible Items:", visibleItems);
   return (
     <div className="heroSectionContainer">
