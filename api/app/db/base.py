@@ -1,4 +1,4 @@
-
 from app.db.session import Base
+from app.models.user import User
 
-# Import database models here as we create them.
+__all__ = ["Base", "User"]

@@ -4,12 +4,19 @@ from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 
 from app.db.session import engine
+from app.api.routes.auth import router as auth_router
+from app.api.routes.profiles import router as profiles_router
 
 app = FastAPI(
     title="RawReel API",
     description="Backend API for the RawReel video-sharing platform",
     version="0.1.0",
 )
+
+app.include_router(auth_router, prefix="/api")
+app.include_router(profiles_router, prefix="/api")
+
+
 
 
 @app.get("/health")
