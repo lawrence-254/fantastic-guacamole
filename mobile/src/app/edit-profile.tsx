@@ -4,7 +4,7 @@ import { useRouter } from "expo-router";
 
 import EditProfileForm, {
   type ProfileFormValues,
-} from "../components/profile/EditProfileForm";
+} from "../features/profile/components/EditProfileForm";
 import styles from "./edit-profile.styles";
 
 const initialValues: ProfileFormValues = {

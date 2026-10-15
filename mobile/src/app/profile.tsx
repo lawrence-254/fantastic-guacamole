@@ -1,7 +1,7 @@
 
 import { Pressable, ScrollView, Text, View } from "react-native";
 import { useRouter } from "expo-router";
-import ProfileHeader from "../components/profile/ProfileHeader";
+import ProfileHeader from "../features/profile/components/ProfileHeader";
 import styles from "./profile.styles";
 
 export default function ProfileScreen() {
