@@ -37,6 +37,16 @@ export default function RootLayout() {
         name="edit-profile"
         options={{ href: null, title: "Edit Profile" }}
       />
+
+      <Tabs.Screen
+        name="login"
+        options={{ href: null, title: "Sign in" }}
+      />
+
+      <Tabs.Screen
+        name="register"
+        options={{ href: null, title: "Create account" }}
+      />
     </Tabs>
   );
 }
