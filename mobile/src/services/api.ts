@@ -1,5 +1,8 @@
 
-import { getAccessToken } from "./token-storage";
+import {
+  clearAccessToken,
+  getAccessToken,
+} from "./token-storage";
 
 const API_URL =
   process.env.EXPO_PUBLIC_API_URL ?? "http://localhost:8000/api";
@@ -14,8 +17,8 @@ export async function apiRequest<T>(
   path: string,
   options: ApiOptions = {},
 ): Promise<T> {
-  const token =
-    options.authenticated === false ? null : await getAccessToken();
+  const requiresAuth = options.authenticated !== false;
+  const token = requiresAuth ? await getAccessToken() : null;
 
   const response = await fetch(`${API_URL}${path}`, {
     method: options.method ?? "GET",
@@ -27,6 +30,7 @@ export async function apiRequest<T>(
       ? { body: JSON.stringify(options.body) }
       : {}),
   });
+
 
   if (!response.ok) {
     let message = `Request failed (${response.status}).`;
@@ -43,11 +47,16 @@ export async function apiRequest<T>(
         message = data.detail;
       }
     } catch {
-      // Keep the fallback message when the response is not JSON.
+      // Keep the fallback message.
+    }
+
+    if (response.status === 401 && token) {
+      await clearAccessToken();
     }
 
     throw new Error(message);
   }
+
 
   return response.json() as Promise<T>;
 }

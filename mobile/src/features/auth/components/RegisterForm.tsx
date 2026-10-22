@@ -2,7 +2,6 @@
 import { useState } from "react";
 import {
   ActivityIndicator,
-  Alert,
   Pressable,
   Text,
   TextInput,
@@ -16,45 +15,88 @@ type RegisterFormProps = {
   onSubmit: (values: RegisterFormValues) => Promise<void>;
 };
 
+function getRegistrationError(error: unknown): string {
+  if (!(error instanceof Error)) {
+    return "Unable to create your account. Please try again.";
+  }
+
+  const message = error.message;
+  const normalized = message.toLowerCase();
+
+  if (
+    normalized.includes("network request failed") ||
+    normalized.includes("failed to fetch") ||
+    normalized.includes("networkerror")
+  ) {
+    return "Cannot connect to RawReel. Check your connection and try again.";
+  }
+
+  if (
+    normalized.includes("already registered") ||
+    normalized.includes("already exists") ||
+    normalized.includes("already taken") ||
+    normalized.includes("duplicate")
+  ) {
+    return "That username or email may already be in use.";
+  }
+
+  if (normalized.includes("422")) {
+    return "Some information is invalid. Check your details and try again.";
+  }
+
+  return message || "Unable to create your account. Please try again.";
+}
+
 export default function RegisterForm({ onSubmit }: RegisterFormProps) {
   const [username, setUsername] = useState("");
   const [displayName, setDisplayName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
 
   async function handleSubmit() {
-    if (!username.trim() || !displayName.trim() || !email.trim() || !password) {
-      Alert.alert("Missing information", "Please complete every field.");
+    const normalizedUsername = username.trim();
+    const normalizedDisplayName = displayName.trim();
+    const normalizedEmail = email.trim().toLowerCase();
+
+    if (
+      !normalizedUsername ||
+      !normalizedDisplayName ||
+      !normalizedEmail ||
+      !password
+    ) {
+      setError("Please complete every field.");
       return;
     }
 
-    if (username.trim().length < 3) {
-      Alert.alert("Invalid username", "Use at least 3 characters.");
+    if (!/^[a-zA-Z0-9_]{3,30}$/.test(normalizedUsername)) {
+      setError("Username must be 3–30 characters using letters, numbers, or underscores.");
       return;
     }
 
-    if (password.length < 8) {
-      Alert.alert("Invalid password", "Use at least 8 characters.");
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(normalizedEmail)) {
+      setError("Enter a valid email address.");
+      return;
+    }
+
+    if (password.length < 8 || password.length > 128) {
+      setError("Password must be between 8 and 128 characters.");
       return;
     }
 
     setSubmitting(true);
+    setError("");
 
     try {
       await onSubmit({
-        username: username.trim(),
-        displayName: displayName.trim(),
-        email: email.trim().toLowerCase(),
+        username: normalizedUsername,
+        displayName: normalizedDisplayName,
+        email: normalizedEmail,
         password,
       });
-    } catch (error) {
-      Alert.alert(
-        "Registration failed",
-        error instanceof Error
-          ? error.message
-          : "Unable to create your account. Please try again.",
-      );
+    } catch (err) {
+      setError(getRegistrationError(err));
     } finally {
       setSubmitting(false);
     }
@@ -70,7 +112,9 @@ export default function RegisterForm({ onSubmit }: RegisterFormProps) {
         placeholder="Choose a username"
         autoCapitalize="none"
         autoCorrect={false}
+        autoComplete="username"
         maxLength={30}
+        editable={!submitting}
       />
 
       <Text style={styles.label}>Display name</Text>
@@ -80,6 +124,7 @@ export default function RegisterForm({ onSubmit }: RegisterFormProps) {
         onChangeText={setDisplayName}
         placeholder="Your display name"
         maxLength={100}
+        editable={!submitting}
       />
 
       <Text style={styles.label}>Email</Text>
@@ -91,6 +136,8 @@ export default function RegisterForm({ onSubmit }: RegisterFormProps) {
         keyboardType="email-address"
         autoCapitalize="none"
         autoCorrect={false}
+        autoComplete="email"
+        editable={!submitting}
       />
 
       <Text style={styles.label}>Password</Text>
@@ -101,13 +148,23 @@ export default function RegisterForm({ onSubmit }: RegisterFormProps) {
         placeholder="At least 8 characters"
         secureTextEntry
         autoCapitalize="none"
+        autoComplete="new-password"
         maxLength={128}
+        editable={!submitting}
       />
+
+      {error ? (
+        <Text accessibilityRole="alert" style={styles.error}>
+          {error}
+        </Text>
+      ) : null}
 
       <Pressable
         style={[styles.submitButton, submitting && styles.disabledButton]}
-        onPress={handleSubmit}
+        onPress={() => void handleSubmit()}
         disabled={submitting}
+        accessibilityRole="button"
+        accessibilityState={{ disabled: submitting, busy: submitting }}
       >
         {submitting ? (
           <ActivityIndicator color="#FFFFFF" />

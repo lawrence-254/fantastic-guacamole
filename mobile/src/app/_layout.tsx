@@ -1,10 +1,33 @@
 
+import {
+  ActivityIndicator,
+  StyleSheet,
+  View,
+  useColorScheme,
+} from "react-native";
 import { Tabs } from "expo-router";
-import { useColorScheme } from "react-native";
+
+import { useAuthGuard } from "../features/auth/hooks/use-auth-guard";
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const isDark = colorScheme === "dark";
+  const checking = useAuthGuard();
+
+  if (checking) {
+    return (
+      <View
+        style={[
+          styles.loading,
+          {
+            backgroundColor: isDark ? "#111827" : "#FFFFFF",
+          },
+        ]}
+      >
+        <ActivityIndicator size="large" color="#15803D" />
+      </View>
+    );
+  }
 
   return (
     <Tabs
@@ -20,33 +43,67 @@ export default function RootLayout() {
     >
       <Tabs.Screen
         name="index"
-        options={{ title: "Home", tabBarLabel: "Home" }}
+        options={{
+          title: "Home",
+          tabBarLabel: "Home",
+        }}
       />
 
       <Tabs.Screen
         name="explore"
-        options={{ title: "Explore", tabBarLabel: "Explore" }}
+        options={{
+          title: "Explore",
+          tabBarLabel: "Explore",
+        }}
+      />
+
+      <Tabs.Screen
+        name="publish"
+        options={{
+          title: "Publish",
+          tabBarLabel: "Publish",
+        }}
       />
 
       <Tabs.Screen
         name="profile"
-        options={{ title: "Profile", tabBarLabel: "Profile" }}
+        options={{
+          title: "Profile",
+          tabBarLabel: "Profile",
+        }}
       />
 
       <Tabs.Screen
         name="edit-profile"
-        options={{ href: null, title: "Edit Profile" }}
+        options={{
+          href: null,
+          title: "Edit Profile",
+        }}
       />
 
       <Tabs.Screen
         name="login"
-        options={{ href: null, title: "Sign in" }}
+        options={{
+          href: null,
+          title: "Sign in",
+        }}
       />
 
       <Tabs.Screen
         name="register"
-        options={{ href: null, title: "Create account" }}
+        options={{
+          href: null,
+          title: "Create account",
+        }}
       />
     </Tabs>
   );
 }
+
+const styles = StyleSheet.create({
+  loading: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});

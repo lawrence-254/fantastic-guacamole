@@ -41,6 +41,12 @@ const styles = StyleSheet.create({
   disabledButton: {
     opacity: 0.65,
   },
+  error: {
+  color: "#DC2626",
+  marginTop: 8,
+  marginBottom: 8,
+  fontSize: 14,
+},
 });
 
 export default styles;
